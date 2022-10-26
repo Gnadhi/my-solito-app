@@ -7,7 +7,7 @@ const StyledButton = styled(TouchableOpacity);
 type ButtonProps = { text?: string; icon?: JSX.Element };
 
 const Button = ({ text, icon }: ButtonProps) => (
-  <StyledButton tw="flex flex-row justify-center uppercase rounded border border-transparent px-3 py-1 text-sm font-medium text-gray-400 shadow-sm hover:bg-gray-700 hover:text-gray-300">
+  <StyledButton tw="border border-red-500 px-2 py-1 hover:bg-red-400 active:bg-red-400">
     {icon}
     {text}
   </StyledButton>
