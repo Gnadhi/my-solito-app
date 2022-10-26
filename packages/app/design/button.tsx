@@ -1,14 +1,15 @@
 import { TouchableOpacity } from 'react-native';
 import { styled } from 'nativewind';
-import Text from './text';
 import CommandIcon from './icons/command';
 
-const Button = styled(TouchableOpacity);
+const StyledButton = styled(TouchableOpacity);
 
-const CustomButton = () => (
-  <Button tw="flex flex-row items-center rounded border border-transparent bg-gray-600 px-4 py-1 text-sm font-medium text-gray-200 shadow-sm">
-    <CommandIcon tw="w-5 h-5 -ml-2 mr-1" />
-    Ctr+K
-  </Button>
+type ButtonProps = { text?: string; icon?: JSX.Element };
+
+const Button = ({ text, icon }: ButtonProps) => (
+  <StyledButton tw="flex flex-row justify-center uppercase rounded border border-transparent px-3 py-1 text-sm font-medium text-gray-400 shadow-sm hover:bg-gray-700 hover:text-gray-300">
+    {icon}
+    {text}
+  </StyledButton>
 );
-export default CustomButton;
+export default Button;

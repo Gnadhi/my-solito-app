@@ -1,10 +1,12 @@
 import View from './view';
 import SettingsIcon from './icons/settings';
 import CommandIcon from './icons/command';
-import Button from "./button";
+import SearchIcon from './icons/search';
+import Button from './button';
+import AddIcon from './icons/add';
 
 const Navbar = () => (
-  <View tw="bg-gray-700">
+  <View tw="bg-blue-300">
     <View tw="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <View tw="flex-1 flex-row h-16 my-2 justify-between">
         <View tw="flex-1 flex-row">
@@ -15,11 +17,15 @@ const Navbar = () => (
         </View>
         {/* Settings Icon */}
         <View tw="hidden md:ml-4 md:flex md:flex-shrink-0 md:items-center md:flex-row">
-          <Button />
+          <Button text="Quick Add" icon={<AddIcon tw="w-6 h-6 -ml-1 mr-1" />} />
+          <Button
+            text="Search Place Holder !"
+            icon={<SearchIcon tw="w-6 h-6 -ml-1 mr-1" />}
+          />
+          <Button text="CTR+K" icon={<CommandIcon tw="w-6 h-6 -ml-1 mr-1" />} />
+          <Button icon={<SettingsIcon tw="w-6 h-6" />} />
+
         </View>
-
-
-
       </View>
     </View>
   </View>
